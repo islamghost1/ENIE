@@ -5,20 +5,31 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
-             x:Class="ENIE.Views.MainView">
+             x:Class="ENIE.Views.MainView"
+             BackgroundColor="#36454F">
     <ContentPage.Content>
 
-
-        <StackLayout >
-            <forms:AnimationView  Animation="errorBusPurple.json"
-                                  AutoPlay="True"
-                                  Loop="True"
-                                  HorizontalOptions="FillAndExpand"
-                                  VerticalOptions="FillAndExpand"/>
-
-            <Button x:Name="RETRY" Text="RETRY_T" Clicked="NavigateButton_OnClicked" HorizontalOptions="Center"></Button>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"  />
+                <RowDefinition Height="*" />
+               
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              
+           
+            </Grid.ColumnDefinitions>
             
-        </StackLayout>
+                <forms:AnimationView  Animation="LoadingBus.json"
+                                              AutoPlay="True"
+                                              Loop="True"
+                                              HorizontalOptions="FillAndExpand"
+                                              VerticalOptions="FillAndExpand"
+                                      Grid.Row="0" Grid.ColumnSpan="2"/>
 
+    
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -74,6 +74,7 @@
     <BundleResource Include="Resources\Montserrat-SemiBold.ttf" />
     <BundleResource Include="Resources\error404.json" />
     <BundleResource Include="Resources\errorBusPurple.json" />
+    <BundleResource Include="Resources\LoadingBus.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

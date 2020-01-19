@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace ENIE.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,11 +16,14 @@ namespace ENIE.Views
         public MainView()
         {
             InitializeComponent();
+            SetValue(NavigationPage.HasNavigationBarProperty,false);
+            Login();
 
         }
-        private  void NavigateButton_OnClicked(object sender, EventArgs e)
+        private async void Login()
         {
-            
+            await Task.Delay(4000);
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

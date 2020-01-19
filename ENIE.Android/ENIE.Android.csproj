@@ -84,6 +84,7 @@
     <AndroidAsset Include="Assets\Montserrat-SemiBold.ttf" />
     <AndroidAsset Include="Assets\error404.json" />
     <AndroidAsset Include="Assets\errorBusPurple.json" />
+    <AndroidAsset Include="Assets\LoadingBus.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -114,6 +115,9 @@
       <Project>{EA3BBCCF-07CB-4306-85EF-40CFF63771BF}</Project>
       <Name>ENIE</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\vague.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

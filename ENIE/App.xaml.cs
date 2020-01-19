@@ -8,13 +8,17 @@ namespace ENIE
 {
     public partial class App : Application
     {
+        
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
+        public Color BarBackgroundColor { get; }
+
         public App()
         { 
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTk2OTUwQDMxMzcyZTM0MmUzMENVT1lVMTlZUGFhZk9PUlR0a2ZPY0V4KzlRVW1TRlAvWndDalREWDFyVmc9");
             InitializeComponent();
-           
-            MainPage = new MainView();
+
+            MainPage = new NavigationPage(new MainView());
+          
         }
 
         protected override void OnStart()

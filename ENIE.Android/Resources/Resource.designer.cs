@@ -8769,6 +8769,9 @@ namespace ENIE.Droid
 			// aapt resource value: 0x7F0700A1
 			public const int tooltip_frame_light = 2131165345;
 			
+			// aapt resource value: 0x7F0700A2
+			public const int vague = 2131165346;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

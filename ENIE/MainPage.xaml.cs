@@ -16,6 +16,7 @@ namespace ENIE
         public MainPage()
         {
             InitializeComponent();
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
         }
     }
 }
