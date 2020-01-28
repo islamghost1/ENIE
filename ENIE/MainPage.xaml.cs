@@ -1,10 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
+
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
+
 using System.Threading.Tasks;
 using Xamarin.Forms;
+
+using Xamarin.Forms.Maps;
+
 
 namespace ENIE
 {
@@ -17,6 +19,12 @@ namespace ENIE
         {
             InitializeComponent();
             SetValue(NavigationPage.HasNavigationBarProperty, false);
+            Task.Delay(2000);
+            Map map = new Map();
+            Content = map;
         }
+
+       
     }
 }
+
