@@ -8,8 +8,43 @@
              x:Class="ENIE.MainPage">
 
         <Grid>
-            <map:Map x:Name="map" />
-         </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"  />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+
+
+        </Grid.ColumnDefinitions>
+
+
+
+        <map:Map x:Name="MainMap"  Grid.RowSpan="3" Grid.ColumnSpan="4"
+                  IsShowingUser="True"
+               MoveToLastRegionOnLayoutChange="False" />
+
+
+
+
+
+
+        <Button  x:Name="SettingButton" Grid.Row="1" Grid.Column="1" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedSettingButton"/>
+        <Image x:Name="SettingIcon" Grid.Row="1" Scale="0.7" Grid.Column="1" Source="ic_settings_white_18dp.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                Tapped="OnIconSettingTapped"
+                NumberOfTapsRequired="1" />
+            </Image.GestureRecognizers>
+        </Image>
+        <Label Text="{Binding boardwalkPin.Position}" Grid.Row="2" Grid.Column="1"/>
+
+    </Grid>
     
 
 </ContentPage>
