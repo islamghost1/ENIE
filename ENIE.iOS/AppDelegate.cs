@@ -26,7 +26,7 @@ namespace ENIE.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Xamarin.FormsGoogleMaps.Init("AIzaSyBmpHj_kS8Q3UXgpB1Hi-5pzKznIeQtHTM");
+            Xamarin.FormsGoogleMaps.Init("AIzaSyBK63PBKNfEanW5Ja39AOU0MW9dpbxHvOc");
             global::Xamarin.Forms.Forms.Init();
             Core.Init();
             SfButtonRenderer.Init();
