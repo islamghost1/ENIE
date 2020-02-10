@@ -4,7 +4,7 @@ using Syncfusion.XForms.iOS.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Xamarin.Forms.GoogleMaps.iOS;
 using Foundation;
 using UIKit;
 
@@ -16,6 +16,7 @@ namespace ENIE.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
+
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -25,7 +26,7 @@ namespace ENIE.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Xamarin.FormsMaps.Init();
+            Xamarin.FormsGoogleMaps.Init("AIzaSyBmpHj_kS8Q3UXgpB1Hi-5pzKznIeQtHTM");
             global::Xamarin.Forms.Forms.Init();
             Core.Init();
             SfButtonRenderer.Init();
