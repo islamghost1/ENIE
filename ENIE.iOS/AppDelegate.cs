@@ -8,6 +8,7 @@ using Xamarin.Forms.GoogleMaps.iOS;
 using Foundation;
 using UIKit;
 
+
 namespace ENIE.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -16,7 +17,7 @@ namespace ENIE.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
-
+        
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -26,8 +27,11 @@ namespace ENIE.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Xamarin.FormsGoogleMaps.Init("AIzaSyBK63PBKNfEanW5Ja39AOU0MW9dpbxHvOc");
+           
+            
+         
             global::Xamarin.Forms.Forms.Init();
+            Xamarin.FormsGoogleMaps.Init("AIzaSyBK63PBKNfEanW5Ja39AOU0MW9dpbxHvOc");
             Core.Init();
             SfButtonRenderer.Init();
             SfGradientViewRenderer.Init();
