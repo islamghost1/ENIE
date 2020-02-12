@@ -12,13 +12,16 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"  />
                 <RowDefinition Height="50" />
+                <RowDefinition Height="450" />
+                <RowDefinition Height="50" />
                 <RowDefinition Height="*" />
 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10" />
-                <ColumnDefinition Width="50" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="*" />
 
 
@@ -26,10 +29,10 @@
 
 
 
-                <maps:Map x:Name="MainMap"  Grid.RowSpan="3" Grid.ColumnSpan="4" MyLocationEnabled="True" />
+                <maps:Map x:Name="MainMap"  Grid.RowSpan="5" Grid.ColumnSpan="5" MyLocationEnabled="True" />
 
 
-                <Button  x:Name="SettingButton" Grid.Row="1" Grid.Column="1" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedSettingButton"/>
+        <Button  x:Name="SettingButton" Grid.Row="1" Grid.Column="1" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedSettingButton" HeightRequest="100" WidthRequest="50" />
                 <Image x:Name="SettingIcon" Grid.Row="1" Scale="0.7" Grid.Column="1" Source="ic_settings_white_18dp.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
@@ -37,8 +40,10 @@
                         NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Label x:Name="LabelPostion" Text="" Grid.Row="2" Grid.Column="1" TextColor="Red" IsVisible="True"/>
-                <Label x:Name="Label2Postion" Text="" Grid.Row="2" Grid.Column="2" TextColor="Blue" IsVisible="True"/>
+                <Label x:Name="LabelPostion" Text="" Grid.Row="2" Grid.Column="1" TextColor="Red" IsVisible="False"/>
+                <Label x:Name="Label2Postion" Text="" Grid.Row="2" Grid.Column="2" TextColor="Blue" IsVisible="False"/>
+
+        <Button Text="Searsh" Margin="30,1,5,10"  Grid.Row="3" Grid.Column="3" WidthRequest="200"  HeightRequest="100" CornerRadius="10" BackgroundColor="	#FECC39" HorizontalOptions="End" />
         
 
     </Grid>
