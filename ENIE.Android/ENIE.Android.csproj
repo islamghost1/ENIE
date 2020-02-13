@@ -58,9 +58,6 @@
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
       <Version>3.0.4</Version>
     </PackageReference>
-    <PackageReference Include="DK.SlidingPanel">
-      <Version>2.2.9</Version>
-    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>

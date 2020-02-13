@@ -4,11 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
-            
+           
              mc:Ignorable="d"
              x:Class="ENIE.MainPage">
-
-        <Grid>
+    
+    <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"  />
                 <RowDefinition Height="auto" />
@@ -21,19 +21,20 @@
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
-                <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="*" />
+               
+              
 
 
             </Grid.ColumnDefinitions>
 
+       
+
+        <maps:Map x:Name="MainMap"   Grid.RowSpan="5" Grid.ColumnSpan="4" MyLocationEnabled="True"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
 
 
-                <maps:Map x:Name="MainMap"  Grid.RowSpan="5" Grid.ColumnSpan="5" MyLocationEnabled="True" />
-
-
-        <Button  x:Name="SettingButton" Grid.Row="1" Grid.Column="1" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedSettingButton" HeightRequest="50" WidthRequest="50" />
-                <Image x:Name="SettingIcon" Grid.Row="1" Scale="0.7" Grid.Column="1" Source="ic_settings_white_18dp.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
+        <Button  x:Name="SettingButton" Margin="10,5,10,50" Grid.Row="1" Grid.Column="0" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedSettingButton" HeightRequest="50" WidthRequest="50" />
+        <Image x:Name="SettingIcon" Margin="10,5,10,50" Grid.Row="1" Scale="0.7" Grid.Column="0" Source="ic_settings_white_18dp.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
                         Tapped="OnIconSettingTapped"
@@ -43,8 +44,96 @@
                 <Label x:Name="LabelPostion" Text="" Grid.Row="2" Grid.Column="1" TextColor="Red" IsVisible="False"/>
                 <Label x:Name="Label2Postion" Text="" Grid.Row="2" Grid.Column="2" TextColor="Blue" IsVisible="False"/>
 
-        <Button Text="Searsh" Margin="50,50,10,50"  Grid.Row="4" Grid.ColumnSpan="3" WidthRequest="250"  HeightRequest="50" CornerRadius="10" BackgroundColor="#FECC39" HorizontalOptions="End" VerticalOptions="End"/>
+        <Button Text="Searsh" Margin="50,50,10,50"  Grid.Row="4" Grid.ColumnSpan="2" WidthRequest="250"  HeightRequest="50" CornerRadius="10" BackgroundColor="#FECC39" HorizontalOptions="Start" VerticalOptions="End"/>
+
+
+
+
+
         
+        <StackLayout Grid.Row="4" Grid.ColumnSpan="4"  x:Name="QuickMenuPullLayout"
+                          HorizontalOptions="FillAndExpand"     
+                          VerticalOptions="End"
+                          Spacing="0">
+
+            <Grid    x:Name="QuickMenuLayout">
+                <StackLayout BackgroundColor="White" Opacity="0.8"></StackLayout>
+
+                <Grid   x:Name="QuickMenuInnerLayout"
+                            Padding="20,20,20,10"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="End">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout  x:Name="Fb" 
+                                      VerticalOptions="FillAndExpand"
+                                      HorizontalOptions="FillAndExpand"
+                                      Grid.Column="0" 
+                                      Grid.Row="0">
+                        <Image Source="Background.jpg" 
+                                               HeightRequest="60"
+                                               WidthRequest="60"
+                                               Aspect="AspectFit"></Image>
+                        <Label Text="FACEBOOK" 
+                                   TextColor="#1976D2" 
+                                   HorizontalOptions="FillAndExpand"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Small"></Label>
+                    </StackLayout>
+
+                    <StackLayout  x:Name="Twitter"
+                                      VerticalOptions="FillAndExpand"
+                                      HorizontalOptions="FillAndExpand"
+                                      Grid.Column="1" 
+                                      Grid.Row="0">
+                        <Image Source="vague.jpg" 
+                                               HeightRequest="60"
+                                               WidthRequest="60"
+                                               Aspect="AspectFit"></Image>
+
+                        <Label Text="TWITTER" 
+                                   TextColor="#1976D2" 
+                                   HorizontalOptions="FillAndExpand"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Small"></Label>
+                    </StackLayout>
+
+                    <StackLayout  x:Name="Google"
+                                      VerticalOptions="FillAndExpand"
+                                      HorizontalOptions="FillAndExpand"
+                                      Grid.Column="2" 
+                                      Grid.Row="0">
+                        <Image Source="Background.jpgva" 
+                                               HeightRequest="60"
+                                               WidthRequest="60"
+                                               Aspect="AspectFit"></Image>
+                        <Label Text="GOOGLE" 
+                                   TextColor="#1976D2" 
+                                   HorizontalOptions="FillAndExpand"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Small"></Label>
+                    </StackLayout>
+                </Grid>
+                
+            </Grid>
+            <Grid x:Name="Notification"  HeightRequest="200">
+                <StackLayout BackgroundColor="Black" Opacity="0.3"></StackLayout>
+
+                <ScrollView Margin="10,10,10,10">
+                    <Image Source="Background.jpg"></Image>
+
+                </ScrollView>
+
+            </Grid>
+        </StackLayout>
+
 
     </Grid>
     

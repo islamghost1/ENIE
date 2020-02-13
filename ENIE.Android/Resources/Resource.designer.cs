@@ -2636,7 +2636,6 @@ namespace ENIE.Droid
 			global::Lottie.Forms.Resource.Styleable.View_paddingEnd = global::ENIE.Droid.Resource.Styleable.View_paddingEnd;
 			global::Lottie.Forms.Resource.Styleable.View_paddingStart = global::ENIE.Droid.Resource.Styleable.View_paddingStart;
 			global::Lottie.Forms.Resource.Styleable.View_theme = global::ENIE.Droid.Resource.Styleable.View_theme;
-			global::Splat.Resource.String.library_name = global::ENIE.Droid.Resource.String.library_name;
 			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_indeterminate_to_checked_box_inner_merged_animation = global::ENIE.Droid.Resource.Animation.btn_checkbox_indeterminate_to_checked_box_inner_merged_animation;
 			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_indeterminate_to_checked_icon_null_animation = global::ENIE.Droid.Resource.Animation.btn_checkbox_indeterminate_to_checked_icon_null_animation;
 			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::ENIE.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
@@ -10212,31 +10211,28 @@ namespace ENIE.Droid
 			public const int hide_bottom_view_on_scroll_behavior = 2131558462;
 			
 			// aapt resource value: 0x7F0D003F
-			public const int library_name = 2131558463;
+			public const int mtrl_chip_close_icon_content_description = 2131558463;
 			
 			// aapt resource value: 0x7F0D0040
-			public const int mtrl_chip_close_icon_content_description = 2131558464;
+			public const int password_toggle_content_description = 2131558464;
 			
 			// aapt resource value: 0x7F0D0041
-			public const int password_toggle_content_description = 2131558465;
+			public const int path_password_eye = 2131558465;
 			
 			// aapt resource value: 0x7F0D0042
-			public const int path_password_eye = 2131558466;
+			public const int path_password_eye_mask_strike_through = 2131558466;
 			
 			// aapt resource value: 0x7F0D0043
-			public const int path_password_eye_mask_strike_through = 2131558467;
+			public const int path_password_eye_mask_visible = 2131558467;
 			
 			// aapt resource value: 0x7F0D0044
-			public const int path_password_eye_mask_visible = 2131558468;
+			public const int path_password_strike_through = 2131558468;
 			
 			// aapt resource value: 0x7F0D0045
-			public const int path_password_strike_through = 2131558469;
+			public const int search_menu_title = 2131558469;
 			
 			// aapt resource value: 0x7F0D0046
-			public const int search_menu_title = 2131558470;
-			
-			// aapt resource value: 0x7F0D0047
-			public const int status_bar_notification_info_overflow = 2131558471;
+			public const int status_bar_notification_info_overflow = 2131558470;
 			
 			static String()
 			{
