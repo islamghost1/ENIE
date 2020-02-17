@@ -31,12 +31,14 @@ namespace ENIE
         private static readonly CompositeDisposable EventSubscriptions = new CompositeDisposable();
         private readonly PanGestureRecognizer _panGesture = new PanGestureRecognizer();
         private double _transY;
+        public double FingerMouvement; 
+       
 
         public MainPage()
         {
 
             InitializeComponent();
-            //  InitializeValues();
+           // InitializeValues();
             GetPosition();
             SetValue(NavigationPage.HasNavigationBarProperty, false);
            // BindingContext = new MainPageViewModel();
@@ -108,6 +110,7 @@ namespace ENIE
 
             EventSubscriptions.Add(panGestureObservable);
             QuickMenuInnerLayout.GestureRecognizers.Add(_panGesture);
+            Debug.WriteLine("InitializeObservables");
         }
         private void CheckQuickMenuPullOutGesture(EventPattern<PanUpdatedEventArgs> x)
         {
@@ -123,15 +126,15 @@ namespace ENIE
                         {
                             QuickMenuPullLayout.TranslationY = Math.Max(-200,
                                 Math.Min(Notification.HeightRequest, QuickMenuPullLayout.TranslationY + e.TotalY));
-                            Debug.WriteLine(e.TotalY);
+                            Debug.WriteLine("CheckQuickMenuPullOutGesture");
                         });
                     }, 2);
 
                     break;
 
                 case GestureStatus.Completed:
-                    // Store the translation applied during the pan
-                    _transY = QuickMenuPullLayout.TranslationY;
+                    //Store the translation applied during the pan
+                    _transY = QuickMenuPullLayout.TranslationY ;
                     break;
                 case GestureStatus.Canceled:
                     Debug.WriteLine("Canceled");
@@ -149,6 +152,7 @@ namespace ENIE
                     CancellationToken.None,
                     TaskContinuationOptions.OnlyOnRanToCompletion,
                     TaskScheduler.FromCurrentSynchronizationContext());
+            Debug.WriteLine("MethodLockedSync");
         }
 
         //Slide view Up 
@@ -160,8 +164,10 @@ namespace ENIE
             OnAppearing();
            
             await Task.Delay(1);
-          
 
+            QuickMenuPullLayout.TranslationY = Math.Max(-200,
+                               Math.Min(Notification.HeightRequest, QuickMenuPullLayout.TranslationY -300));
+            _transY = QuickMenuPullLayout.TranslationY = 200; 
             //var pin = new Pin
             //{
             //    Position = new Position(Latitude, Longitude),
