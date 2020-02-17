@@ -15,6 +15,7 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -30,7 +31,7 @@
 
        
 
-        <maps:Map x:Name="MainMap"   Grid.RowSpan="5" Grid.ColumnSpan="4" MyLocationEnabled="True"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <maps:Map x:Name="MainMap"   Grid.RowSpan="6" Grid.ColumnSpan="4" MyLocationEnabled="True"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
 
 
         <Button  x:Name="SettingButton" Margin="10,5,10,50" Grid.Row="1" Grid.Column="0" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedSettingButton" HeightRequest="50" WidthRequest="50" />
@@ -44,96 +45,26 @@
                 <Label x:Name="LabelPostion" Text="" Grid.Row="2" Grid.Column="1" TextColor="Red" IsVisible="False"/>
                 <Label x:Name="Label2Postion" Text="" Grid.Row="2" Grid.Column="2" TextColor="Blue" IsVisible="False"/>
 
-        <Button Text="Searsh" Margin="50,50,10,50"  Grid.Row="4" Grid.ColumnSpan="2" WidthRequest="250"  HeightRequest="50" CornerRadius="10" BackgroundColor="#FECC39" HorizontalOptions="Start" VerticalOptions="End"/>
 
 
+        <Grid x:Name="XpandeView"  Grid.Row="5" Grid.ColumnSpan="4"  Margin="0,0,0,0" VerticalOptions="Center"  Opacity="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
 
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
 
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Searsh" Grid.Row="1" Grid.Column="2" Margin="0,0,0,30"  WidthRequest="350"  HeightRequest="50" CornerRadius="10" BackgroundColor="#FECC39" HorizontalOptions="Center" VerticalOptions="End"/>
+
+        </Grid>
 
         
-        <StackLayout Grid.Row="4" Grid.ColumnSpan="4"  x:Name="QuickMenuPullLayout"
-                          HorizontalOptions="FillAndExpand"     
-                          VerticalOptions="End"
-                          Spacing="0">
-
-            <Grid    x:Name="QuickMenuLayout">
-                <StackLayout BackgroundColor="White" Opacity="0.8"></StackLayout>
-
-                <Grid   x:Name="QuickMenuInnerLayout"
-                            Padding="20,20,20,10"
-                            HorizontalOptions="FillAndExpand" 
-                            VerticalOptions="End">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-
-                    <StackLayout  x:Name="Fb" 
-                                      VerticalOptions="FillAndExpand"
-                                      HorizontalOptions="FillAndExpand"
-                                      Grid.Column="0" 
-                                      Grid.Row="0">
-                        <Image Source="Background.jpg" 
-                                               HeightRequest="60"
-                                               WidthRequest="60"
-                                               Aspect="AspectFit"></Image>
-                        <Label Text="FACEBOOK" 
-                                   TextColor="#1976D2" 
-                                   HorizontalOptions="FillAndExpand"
-                                   HorizontalTextAlignment="Center"
-                                   FontSize="Small"></Label>
-                    </StackLayout>
-
-                    <StackLayout  x:Name="Twitter"
-                                      VerticalOptions="FillAndExpand"
-                                      HorizontalOptions="FillAndExpand"
-                                      Grid.Column="1" 
-                                      Grid.Row="0">
-                        <Image Source="vague.jpg" 
-                                               HeightRequest="60"
-                                               WidthRequest="60"
-                                               Aspect="AspectFit"></Image>
-
-                        <Label Text="TWITTER" 
-                                   TextColor="#1976D2" 
-                                   HorizontalOptions="FillAndExpand"
-                                   HorizontalTextAlignment="Center"
-                                   FontSize="Small"></Label>
-                    </StackLayout>
-
-                    <StackLayout  x:Name="Google"
-                                      VerticalOptions="FillAndExpand"
-                                      HorizontalOptions="FillAndExpand"
-                                      Grid.Column="2" 
-                                      Grid.Row="0">
-                        <Image Source="Background.jpgva" 
-                                               HeightRequest="60"
-                                               WidthRequest="60"
-                                               Aspect="AspectFit"></Image>
-                        <Label Text="GOOGLE" 
-                                   TextColor="#1976D2" 
-                                   HorizontalOptions="FillAndExpand"
-                                   HorizontalTextAlignment="Center"
-                                   FontSize="Small"></Label>
-                    </StackLayout>
-                </Grid>
-                
-            </Grid>
-            <Grid x:Name="Notification"  HeightRequest="200">
-                <StackLayout BackgroundColor="Black" Opacity="0.3"></StackLayout>
-
-                <ScrollView Margin="10,10,10,10">
-                    <Image Source="Background.jpg"></Image>
-
-                </ScrollView>
-
-            </Grid>
-        </StackLayout>
-
 
     </Grid>
     

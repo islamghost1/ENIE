@@ -146,7 +146,7 @@
       <Version>1.68.1.1</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
-      <Version>17.4.0.47</Version>
+      <Version>17.4.0.49</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Geolocator">
       <Version>4.5.0.6</Version>
@@ -159,11 +159,14 @@
     <PackageReference Include="Xamarin.Google.iOS.Maps">
       <Version>3.5.0.1</Version>
     </PackageReference>
+    <PackageReference Include="System.Reactive">
+      <Version>4.3.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\ENIE\ENIE.csproj">
-      <Project>{EA3BBCCF-07CB-4306-85EF-40CFF63771BF}</Project>
+      <Project>{12890E97-58B1-48DB-9FE1-5D1C97D76C6D}</Project>
       <Name>ENIE</Name>
     </ProjectReference>
   </ItemGroup>
