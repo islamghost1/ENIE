@@ -25,7 +25,11 @@ namespace ENIE
     public partial class MainPage : ContentPage
     {
 
-       
+        double? layoutHeight;
+        double layoutBoundsHeight;
+        int direction;
+        const double layoutPropHeightMax = 0.75;
+        const double layoutPropHeightMin = 0.04;
         public static double Latitude;
         public static double Longitude;
  
@@ -34,8 +38,9 @@ namespace ENIE
         {
 
             InitializeComponent();
-            //  InitializeValues();
+            InitializeValues();
             GetPosition();
+          
             SetValue(NavigationPage.HasNavigationBarProperty, false);
            // BindingContext = new MainPageViewModel();
 
@@ -44,8 +49,15 @@ namespace ENIE
         }
         public void InitializeValues()
         {
-            Latitude = 0;
-            Longitude=0;
+            //Latitude = 0;
+            //Longitude=0;
+            //making th hight and the width change dinamycly 
+            Searsh.HeightRequest = (App.screenHeight * 20) / 250;
+            Searsh.WidthRequest = (App.screenWidth * 70) / 75;
+            XpandeViewForSettings.TranslationY =(App.screenHeight);
+            XpandeViewForSettings.HeightRequest = (App.screenHeight);
+
+         
         }
             public async void GetPosition() 
         {
@@ -94,12 +106,42 @@ namespace ENIE
             //};
 
             //MainMap.Pins.Add(pin);
-            await XpandeView.TranslateTo(0, -200,500);
-            await Task.Delay(2000);
-            await XpandeView.TranslateTo(0, 0, 500);
+
+          //  XpandeViewForSettings.HeightRequest = App.screenHeight;
+           // await XpandeViewForSettings.TranslateTo(0, -(App.screenHeight), 50);
+
+            //await Task.Delay(2000);
+            await XpandeViewForSettings.TranslateTo(0, 0, 200);
+           // XpandeViewForSettings.HeightRequest = 0;
+
+
         }
 
-
+        //void PanGestureHandler(object sender, PanUpdatedEventArgs e)
+        //{
+        //    layoutHeight = layoutHeight ?? ((sender as StackLayout).Parent as AbsoluteLayout).Height;
+        //    switch (e.StatusType)
+        //    {
+        //        case GestureStatus.Started:
+        //            layoutBoundsHeight = AbsoluteLayout.GetLayoutBounds(sender as StackLayout).Height;
+        //            break;
+        //        case GestureStatus.Running:
+        //            direction = e.TotalY < 0 ? 1 : -1;
+        //            break;
+        //        case GestureStatus.Completed:
+        //            if (direction > 0) // snap to max/min, you could use an animation....
+        //            {
+        //                AbsoluteLayout.SetLayoutBounds(bottomDrawer, new Rectangle(0.5, 1.00, 0.9, layoutPropHeightMax));
+        //                swipeLabel.Text = "Swipe me down";
+        //            }
+        //            else
+        //            {
+        //                AbsoluteLayout.SetLayoutBounds(bottomDrawer, new Rectangle(0.5, 1.00, 0.9, layoutPropHeightMin));
+        //                swipeLabel.Text = "Swipe me up";
+        //            }
+        //            break;
+        //    }
+        //}
 
 
         void OnClickedSettingButton(object sender, EventArgs args)

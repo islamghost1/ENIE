@@ -11,7 +11,8 @@ namespace ENIE
         
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
         public Color BarBackgroundColor { get; }
-
+        //screen demotions 
+        public static int screenHeight, screenWidth;
         public App()
         { 
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTk2OTUwQDMxMzcyZTM0MmUzMENVT1lVMTlZUGFhZk9PUlR0a2ZPY0V4KzlRVW1TRlAvWndDalREWDFyVmc9");

@@ -31,6 +31,12 @@ namespace ENIE.iOS
             
          
             global::Xamarin.Forms.Forms.Init();
+
+            //region For Screen Height & Width  
+            App.screenWidth = (int)UIScreen.MainScreen.Bounds.Width;
+            App.screenHeight = (int)UIScreen.MainScreen.Bounds.Height;
+            //endregion
+
             Xamarin.FormsGoogleMaps.Init("AIzaSyBK63PBKNfEanW5Ja39AOU0MW9dpbxHvOc");
             Core.Init();
             SfButtonRenderer.Init();

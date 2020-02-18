@@ -28,6 +28,18 @@ namespace ENIE.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            //region For screen Height & Width  
+            var pixels = Resources.DisplayMetrics.WidthPixels;
+            var scale = Resources.DisplayMetrics.Density;
+            var dps = (double)((pixels - 0.5f) / scale);
+            var ScreenWidth = (int)dps;
+            App.screenWidth = ScreenWidth;
+            pixels = Resources.DisplayMetrics.HeightPixels;
+            dps = (double)((pixels - 0.5f) / scale);
+            var ScreenHeight = (int)dps;
+            App.screenHeight = ScreenHeight;
+            //endregion
+
             base.OnCreate(savedInstanceState);
             Xamarin.FormsGoogleMaps.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
