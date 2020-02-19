@@ -74,12 +74,16 @@
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
-                
-                
 
             </Grid.ColumnDefinitions>
-        
-           
+            <Image x:Name="SettingIcon" Margin="10,5,10,50" Grid.Row="1" Scale="0.7" Grid.Column="0" Source="ic_arrow_back_black_18dp.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="ArrowBackMenu"
+                        NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+
         </Grid>
 
       

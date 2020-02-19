@@ -24,12 +24,7 @@ namespace ENIE
   [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-
-        double? layoutHeight;
-        double layoutBoundsHeight;
-        int direction;
-        const double layoutPropHeightMax = 0.75;
-        const double layoutPropHeightMin = 0.04;
+     
         public static double Latitude;
         public static double Longitude;
  
@@ -150,8 +145,11 @@ namespace ENIE
         }  void OnIconSettingTapped(object sender, EventArgs args)
         {
             SettingButtonVisibility();
+        }void ArrowBackMenu(object sender, EventArgs args)
+        {
+            XpandeViewForSettings.TranslationY = (App.screenHeight);
+            XpandeViewForSettings.HeightRequest = (App.screenHeight);
         }
-
     }
 }
 

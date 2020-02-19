@@ -146,7 +146,7 @@
       <Version>1.68.1.1</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
-      <Version>17.4.0.49</Version>
+      <Version>17.4.0.50</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Geolocator">
       <Version>4.5.0.6</Version>
@@ -184,5 +184,14 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_arrow_back_black_18pt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_arrow_back_black_18pt%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_arrow_back_black_18pt%403x.png" />
   </ItemGroup>
 </Project>
