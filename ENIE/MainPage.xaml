@@ -63,7 +63,7 @@
             <Button x:Name="Searsh" Text="Searsh" Grid.Row="1" Grid.Column="2" Margin="0,0,0,50"  WidthRequest="350"  HeightRequest="50" CornerRadius="10" BackgroundColor="#FECC39" HorizontalOptions="Center" VerticalOptions="End"/>
             
         </Grid>
-
+        
         <Grid x:Name="XpandeViewForSettings"   Grid.RowSpan="6" Grid.ColumnSpan="4" VerticalOptions="End"  Opacity="1" BackgroundColor="White"  >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
@@ -76,14 +76,14 @@
                 <ColumnDefinition Width="auto" />
 
             </Grid.ColumnDefinitions>
-              <Button  x:Name="ArrowBaackButton" Margin="10,5,10,50" Grid.Row="1" Grid.Column="0" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedArrowBack" HeightRequest="50" WidthRequest="50" />
-      
-                       
-           
+            <Button  x:Name="ArrowBaackButton" Margin="10,5,10,50" Grid.Row="1" Grid.Column="0" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedArrowBack" HeightRequest="10" WidthRequest="50" />
+            <!--<Label Text="hello ist's me islam " Grid.Row="1" Grid.Column="0"/>-->
+
+
 
         </Grid>
+        
 
-      
 
     </Grid>
     
