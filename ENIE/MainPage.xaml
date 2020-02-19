@@ -31,8 +31,8 @@
 
        
 
-        <maps:Map x:Name="MainMap"   Grid.RowSpan="6" Grid.ColumnSpan="4" MyLocationEnabled="True"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-
+        <maps:Map x:Name="MainMap"  Grid.RowSpan="6" Grid.ColumnSpan="4" MyLocationEnabled="True"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        
 
         <Button  x:Name="SettingButton" Margin="10,5,10,50" Grid.Row="1" Grid.Column="0" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedSettingButton" HeightRequest="50" WidthRequest="50" />
         <Image x:Name="SettingIcon" Margin="10,5,10,50" Grid.Row="1" Scale="0.7" Grid.Column="0" Source="ic_settings_white_18dp.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
@@ -76,13 +76,10 @@
                 <ColumnDefinition Width="auto" />
 
             </Grid.ColumnDefinitions>
-            <Image x:Name="SettingIcon" Margin="10,5,10,50" Grid.Row="1" Scale="0.7" Grid.Column="0" Source="ic_arrow_back_black_18dp.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer
-                        Tapped="ArrowBackMenu"
-                        NumberOfTapsRequired="1" />
-                </Image.GestureRecognizers>
-            </Image>
+              <Button  x:Name="ArrowBaackButton" Margin="10,5,10,50" Grid.Row="1" Grid.Column="0" CornerRadius="50" BackgroundColor="Gray" IsVisible="True" Clicked="OnClickedArrowBack" HeightRequest="50" WidthRequest="50" />
+      
+                       
+           
 
         </Grid>
 

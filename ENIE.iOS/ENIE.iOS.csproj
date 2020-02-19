@@ -75,6 +75,7 @@
     <BundleResource Include="Resources\error404.json" />
     <BundleResource Include="Resources\errorBusPurple.json" />
     <BundleResource Include="Resources\LoadingBus.json" />
+    <BundleResource Include="ic_arrow_back_black_18pt.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

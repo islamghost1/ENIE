@@ -1,4 +1,4 @@
-﻿using ENIE.ViewModels;
+using ENIE.ViewModels;
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -24,7 +24,7 @@ namespace ENIE
   [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-     
+
         public static double Latitude;
         public static double Longitude;
  
@@ -145,7 +145,7 @@ namespace ENIE
         }  void OnIconSettingTapped(object sender, EventArgs args)
         {
             SettingButtonVisibility();
-        }void ArrowBackMenu(object sender, EventArgs args)
+        }void OnClickedArrowBack(object sender, EventArgs args)
         {
             XpandeViewForSettings.TranslationY = (App.screenHeight);
             XpandeViewForSettings.HeightRequest = (App.screenHeight);
