@@ -61,34 +61,34 @@
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
 
-            </Grid.ColumnDefinitions>
-            <ff:CachedImage Source="blankbackground.png">
-                <ff:CachedImage.Transformations>
-                    <ffTransformations:BlurredTransformation Radius="200" />
-                </ff:CachedImage.Transformations>
-            </ff:CachedImage>
+            </Grid.ColumnDefinitions >
+           
 
             <Button x:Name="Searsh" Text="Searsh" Grid.Row="1" Grid.Column="2" Margin="0,0,0,50"  WidthRequest="350"  HeightRequest="50" CornerRadius="10" BackgroundColor="#FECC39" HorizontalOptions="Center" VerticalOptions="End"/>
             
         </Grid>
 
-        <Grid x:Name="XpandeViewForSettings"   Grid.RowSpan="6" Grid.ColumnSpan="4" VerticalOptions="End"  Opacity="0.7" BackgroundColor="Beige"  >
+        <Grid x:Name="XpandeViewForSettings"   Grid.RowSpan="6" Grid.ColumnSpan="4" VerticalOptions="End"  Opacity="1"   >
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="auto" />
-                 <RowDefinition Height="auto" />
+                 <RowDefinition Height="*" />
 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
-                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
 
             </Grid.ColumnDefinitions>
 
 
           
-          
+           <ff:CachedImage  Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"  Source="blankbackground.png">
+                <ff:CachedImage.Transformations>
+                    <ffTransformations:BlurredTransformation Radius="1000" />
+                </ff:CachedImage.Transformations>
+            </ff:CachedImage>
 
             <Image x:Name="ArrowBack" Margin="30,5,10,50" Grid.Row="1" Scale="4" Grid.Column="0" Source="ArrowBackX3.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
                     <Image.GestureRecognizers>
@@ -107,7 +107,7 @@
             </Image>
             </StackLayout>
            
-
+            
         </Grid>
 
       

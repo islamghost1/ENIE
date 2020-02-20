@@ -28,7 +28,7 @@
 		<string>Montserrat-SemiBold.ttf</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>10.2</string>
+	<string>10.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>ENIE</string>
 	<key>CFBundleIdentifier</key>

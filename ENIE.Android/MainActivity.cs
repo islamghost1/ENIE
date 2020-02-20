@@ -8,12 +8,15 @@ using Android.Widget;
 using Android.OS;
 using Android;
 
+
 namespace ENIE.Droid
 {
+
     [Activity(Label = "ENIE", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-          const int RequestLocationId = 0;
+        const int RequestLocationId = 0;
+        
 
         readonly string[] LocationPermissions =
         {
@@ -45,6 +48,7 @@ namespace ENIE.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+            
         }
         protected override void OnStart()
         {
