@@ -76,6 +76,7 @@
     <BundleResource Include="Resources\errorBusPurple.json" />
     <BundleResource Include="Resources\LoadingBus.json" />
     <BundleResource Include="ic_arrow_back_black_18pt.png" />
+    <BundleResource Include="Resources\blankbackground.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -163,6 +164,21 @@
     <PackageReference Include="System.Reactive">
       <Version>4.3.2</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -172,7 +188,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_settings_white_18pt.png" />
+    <BundleResource Include="Resources\Setting.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_settings_white_18pt%402x.png" />
@@ -187,12 +203,12 @@
     <BundleResource Include="Resources\settings.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_arrow_back_black_18pt.png" />
+    <BundleResource Include="Resources\ArrowBack.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_arrow_back_black_18pt%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_arrow_back_black_18pt%403x.png" />
+    <BundleResource Include="Resources\ArrowBackX3.png" />
   </ItemGroup>
 </Project>

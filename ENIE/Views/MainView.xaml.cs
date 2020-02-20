@@ -22,7 +22,7 @@ namespace ENIE.Views
         }
         private async void Login()
         {
-            await Task.Delay(4000);
+            await Task.Delay(1000);
             await Navigation.PushAsync(new MainPage());
         }
     }
