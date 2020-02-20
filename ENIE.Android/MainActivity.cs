@@ -13,7 +13,7 @@ namespace ENIE.Droid
     [Activity(Label = "ENIE", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        const int RequestLocationId = 0;
+          const int RequestLocationId = 0;
 
         readonly string[] LocationPermissions =
         {
