@@ -17,6 +17,7 @@ using System.Reactive.Linq;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using ENIE.ViewModels;
 
 
 
@@ -42,7 +43,8 @@ namespace ENIE
             InitializeComponent();
             InitializeValues();
             GetPosition();
-          
+            //Sending MSG thrue UDP sockets  
+            
             SetValue(Xamarin.Forms.NavigationPage.HasNavigationBarProperty, false);
            // BindingContext = new MainPageViewModel();
 
@@ -123,8 +125,11 @@ namespace ENIE
             await XpandeViewForSettings.TranslateTo(0, 0, 200);
             SettingIcon.IsVisible = false;
             Searsh.IsVisible = false;
-            
-           // XpandeViewForSettings.HeightRequest = 0;
+
+            // XpandeViewForSettings.HeightRequest = 0;
+
+            //sending sockets message 
+            UDPClientSender.UDP_ClientSender();
 
 
         }

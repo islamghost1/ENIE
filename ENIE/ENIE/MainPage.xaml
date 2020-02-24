@@ -4,10 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
-             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-             xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
-          
+            
              mc:Ignorable="d"
              x:Class="ENIE.MainPage">
     
@@ -84,11 +81,7 @@
 
 
           
-           <ff:CachedImage  Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"  Source="blankbackground.png">
-                <ff:CachedImage.Transformations>
-                    <ffTransformations:BlurredTransformation Radius="1000" />
-                </ff:CachedImage.Transformations>
-            </ff:CachedImage>
+       
 
             <Image x:Name="ArrowBack" Margin="30,5,10,50" Grid.Row="1" Scale="4" Grid.Column="0" Source="ArrowBackX3.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
                     <Image.GestureRecognizers>
