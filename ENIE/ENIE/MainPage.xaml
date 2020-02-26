@@ -91,7 +91,7 @@
                     </Image.GestureRecognizers>
             </Image>
             <StackLayout Grid.Row="2"  Grid.Column="0" >
-                   <Image  Margin="30,5,10,50" Scale="4"  Source="ArrowBackX3.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
+                   <Image  Margin="30,5,10,50" Scale="4"  Source="DarkModeIcon.png" HeightRequest="20" WidthRequest="10"  IsVisible="True">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
                         Tapped="DarkMode"

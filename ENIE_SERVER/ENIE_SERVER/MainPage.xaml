@@ -8,9 +8,10 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label x:Name="Receive" Text="hello" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="CenterAndExpand" TextColor="Black" />
+        
     </StackLayout>
 
 </ContentPage>
