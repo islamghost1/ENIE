@@ -1,4 +1,4 @@
-﻿using Sockets.Plugin;
+using Sockets.Plugin;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,7 +31,11 @@ namespace ENIE.ViewModels
 
         public  async void CallSendmessageToServer()
         {
+<<<<<<< Updated upstream
             IPAddress serverIP = IPAddress.Parse("192.168.1.49");     // Server IP 105.235.139.18 192.168.1.49
+=======
+            IPAddress serverIP = IPAddress.Parse("192.168.171");     // Server IP 105.235.139.18 192.168.1.49
+>>>>>>> Stashed changes
             int port = 27005;                                           // Server port
          
                 for (int i =0; i<1000; i++) { 

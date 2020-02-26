@@ -131,6 +131,7 @@ namespace ENIE
 
             //sending sockets message 
             //  UDPClientSender.UDP_ClientSender();
+<<<<<<< Updated upstream
             UDPClientSender SocketObj = new UDPClientSender();
 
 
@@ -140,6 +141,10 @@ namespace ENIE
 
 
            
+=======
+            
+             UDPClientSender.CallSendmessageToServer();
+>>>>>>> Stashed changes
         }
         
 
