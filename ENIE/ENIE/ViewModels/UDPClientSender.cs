@@ -29,12 +29,11 @@ namespace ENIE.ViewModels
                 return serverResponse;
         }
 
-        public static async void CallSendmessageToServer()
+        public  async void CallSendmessageToServer()
         {
-            IPAddress serverIP = IPAddress.Parse("105.235.139.18");     // Server IP 105.235.139.18 192.168.1.49
+            IPAddress serverIP = IPAddress.Parse("192.168.1.49");     // Server IP 105.235.139.18 192.168.1.49
             int port = 27005;                                           // Server port
-            while (true)
-            {
+         
                 for (int i =0; i<1000; i++) { 
                     await Task.Delay(1000);
                     IPEndPoint ipEndPoint = new IPEndPoint(serverIP, port);
@@ -42,7 +41,7 @@ namespace ENIE.ViewModels
                     string response = UDPClientSender.SendMessageToServer($"hello server{i} , this is the client", ipEndPoint);      // Send the message to the server
                     Debug.WriteLine(response); // Output the result
                 }
-            }
+            
         }
     }
    

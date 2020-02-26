@@ -32,7 +32,9 @@ namespace ENIE
         public static double Latitude;
         public static double Longitude;
         public Boolean DarkModeState=false;
- 
+        delegate void deleg();
+
+
 
         public MainPage()
         {
@@ -129,8 +131,15 @@ namespace ENIE
 
             //sending sockets message 
             //  UDPClientSender.UDP_ClientSender();
+            UDPClientSender SocketObj = new UDPClientSender();
 
-            UDPClientSender.CallSendmessageToServer();
+
+            deleg SocketSender = new deleg(SocketObj.CallSendmessageToServer);
+            Thread thread = new Thread( new ThreadStart(SocketSender));
+            thread.Start();
+
+
+           
         }
         
 
