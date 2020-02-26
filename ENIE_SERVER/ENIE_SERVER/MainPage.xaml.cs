@@ -35,7 +35,7 @@ namespace ENIE_SERVER
             IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Any, port);
             while (true)
             {
-                await Task.Delay(500);
+                await Task.Delay(1000);
                 byte[] receivedBytes = udpListener.Receive(ref ipEndPoint);      // Receive the information from the client as byte array
                 MainPage.clientMessage = Encoding.UTF8.GetString(receivedBytes);   // Convert the message to a string
 
