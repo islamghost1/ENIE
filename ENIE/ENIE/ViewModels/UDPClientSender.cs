@@ -31,7 +31,7 @@ namespace ENIE.ViewModels
 
         public  async void CallSendmessageToServer()
         {
-            IPAddress serverIP = IPAddress.Parse("192.168.1.49");     // Server IP 105.235.139.18 192.168.1.49
+            IPAddress serverIP = IPAddress.Parse("105.235.137.168");     // Server IP 105.235.139.18 192.168.1.49
             int port = 27005;                                           // Server port
          
                 for (int i =0; i<1000; i++) { 

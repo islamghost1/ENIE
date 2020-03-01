@@ -131,17 +131,29 @@ namespace ENIE
 
             //sending sockets message 
             //  UDPClientSender.UDP_ClientSender();
-            UDPClientSender SocketObj = new UDPClientSender();
 
 
-            deleg SocketSender = new deleg(SocketObj.CallSendmessageToServer);
-            Thread thread = new Thread( new ThreadStart(SocketSender));
+
+            //============================UDP=======================//
+            //UDPClientSender SocketObj = new UDPClientSender();
+
+
+            //deleg SocketSender = new deleg(SocketObj.CallSendmessageToServer);
+            //Thread thread = new Thread( new ThreadStart(SocketSender));
+            //thread.Start();
+            //============================UDP=======================//
+
+
+            //============================TCP=======================//
+            TCPCLientSender TCPObj = new TCPCLientSender();
+            deleg SocketSender = new deleg(TCPObj.TCPCleintSender_);
+            Thread thread = new Thread(new ThreadStart(SocketSender));
             thread.Start();
+            //============================TCP=======================//
 
 
-           
         }
-        
+
 
 
 

@@ -11,7 +11,8 @@
         <Label x:Name="Receive" Text="hello" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" TextColor="Black" />
-        
+        <Button Text="Connect"  Clicked="Connect"/>
+
     </StackLayout>
 
 </ContentPage>
