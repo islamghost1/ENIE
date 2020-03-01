@@ -1,4 +1,5 @@
 ﻿using System;
+<<<<<<< HEAD
 using System.Collections.Generic;
 using System.Text;
 using System.Net.Sockets;
@@ -90,4 +91,40 @@ namespace ENIE_SERVER.ViewModel
         }
     }
     
+=======
+using System.Diagnostics;
+using Sockets.Plugin;
+
+namespace ENIE_SERVER.ViewModel
+{
+    public class TCPReceiver
+    {
+        public static string clientMessage;
+        public async void TCPRTCPReceiver_()
+        {
+            var listenPort = 11000;
+            var listener = new TcpSocketListener();
+
+            // when we get connections, read byte-by-byte from the socket's read stream
+            listener.ConnectionReceived += async (sender, args) =>
+            {
+                var client = args.SocketClient;
+
+                var bytesRead = -1;
+                var buf = new byte[1];
+
+                while (bytesRead != 0)
+                {
+                    bytesRead = await args.SocketClient.ReadStream.ReadAsync(buf, 0, 1);
+                    if (bytesRead > 0)
+                        TCPReceiver.clientMessage = buf[0].ToString();
+                        Debug.Write(TCPReceiver.clientMessage);
+                }
+            };
+
+            // bind to the listen port across all interfaces
+            await listener.StartListeningAsync(listenPort);
+        }
+    }
+>>>>>>> 3d64a4b... tcp logic changes
 }
