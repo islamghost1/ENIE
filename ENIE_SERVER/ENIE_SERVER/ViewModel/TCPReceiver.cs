@@ -17,7 +17,7 @@ namespace ENIE_SERVER.ViewModel
             IPHostEntry host = Dns.GetHostEntry("localhost");
             IPAddress ipAddress = host.AddressList[0];
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
-
+            //
 
 
             try
