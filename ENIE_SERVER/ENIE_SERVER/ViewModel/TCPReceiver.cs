@@ -1,23 +1,23 @@
 ﻿using System;
-<<<<<<< HEAD
 using System.Collections.Generic;
 using System.Text;
 using System.Net.Sockets;
 using System.Net;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace ENIE_SERVER.ViewModel
 {
     class TCPReceiver
     {
-        public  void TCPReceiver_()
+        public  async void TCPReceiver_()
         {
             // Get Host IP Address that is used to establish a connection
             // In this case, we get one IP address of localhost that is IP : 127.0.0.1  
             // If a host has multiple addresses, you will get a list of addresses  
-            IPHostEntry host = Dns.GetHostEntry("localhost");
+            IPHostEntry host = Dns.GetHostEntry("192.168.1.171");
             IPAddress ipAddress = host.AddressList[0];
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
+            IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, 11000);
             //
 
 
@@ -25,7 +25,7 @@ namespace ENIE_SERVER.ViewModel
             {
 
                 // Create a Socket that will use Tcp protocol      
-                Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+                Socket listener = new Socket(IPAddress.Any.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 // A Socket must be associated with an endpoint using the Bind method  
                 listener.Bind(localEndPoint);
                 // Specify how many requests a Socket can listen before it gives Server busy response.  
@@ -59,6 +59,7 @@ namespace ENIE_SERVER.ViewModel
                     }
                     if (data.IndexOf("Bocket") > -1)
                     {
+                        await Task.Delay(1000);
                         Console.WriteLine("Text received : {0}", data);
 
                         byte[] msg = Encoding.ASCII.GetBytes(data);
@@ -91,40 +92,4 @@ namespace ENIE_SERVER.ViewModel
         }
     }
     
-=======
-using System.Diagnostics;
-using Sockets.Plugin;
-
-namespace ENIE_SERVER.ViewModel
-{
-    public class TCPReceiver
-    {
-        public static string clientMessage;
-        public async void TCPRTCPReceiver_()
-        {
-            var listenPort = 11000;
-            var listener = new TcpSocketListener();
-
-            // when we get connections, read byte-by-byte from the socket's read stream
-            listener.ConnectionReceived += async (sender, args) =>
-            {
-                var client = args.SocketClient;
-
-                var bytesRead = -1;
-                var buf = new byte[1];
-
-                while (bytesRead != 0)
-                {
-                    bytesRead = await args.SocketClient.ReadStream.ReadAsync(buf, 0, 1);
-                    if (bytesRead > 0)
-                        TCPReceiver.clientMessage = buf[0].ToString();
-                        Debug.Write(TCPReceiver.clientMessage);
-                }
-            };
-
-            // bind to the listen port across all interfaces
-            await listener.StartListeningAsync(listenPort);
-        }
-    }
->>>>>>> 3d64a4b... tcp logic changes
 }
